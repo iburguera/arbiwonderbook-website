@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import arbiLogo from '/ArbiNewLogo.webp';
+import arbiLogo from '../assets/ArbiNewLogo.webp';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
