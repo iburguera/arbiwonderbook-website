@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import arbiLogo from '/ArbiNewLogo.webp';
 
 export default function Header() {
   const links = [
@@ -16,7 +17,7 @@ export default function Header() {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
           <Link to="/" className="no-underline flex items-center">
-            <img src="/ArbiNewLogo.webp" alt="Arbi" className="h-12 w-auto" />
+            <img src={arbiLogo} alt="Arbi" className="h-12 w-auto" />
           </Link>
           <div className="flex gap-8 items-center">
             {links.map((link) => (

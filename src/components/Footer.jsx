@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import arbiLogo from '/ArbiNewLogo.webp';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <img src="/ArbiNewLogo.webp" alt="Arbi" className="h-10 w-auto mb-3" />
+            <img src={arbiLogo} alt="Arbi" className="h-10 w-auto mb-3" />
             <p className="text-sm text-gray-600">
               Augmented Reality books for children in 8 languages.
             </p>
