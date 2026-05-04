@@ -10,7 +10,11 @@ export default function FAQ() {
       faqs: [
         {
           question: 'What devices do I need?',
-          answer: 'Any smartphone or tablet with a camera and recent iOS or Android. No app download required—just use your browser.',
+          answer: 'Any smartphone or tablet with a camera running iOS or Android. You will need to download the free Arbi app — available on the App Store (iOS) and Google Play (Android) — to view the augmented reality experiences.',
+        },
+        {
+          question: 'Do I need to download an app?',
+          answer: 'Yes. To view the augmented reality content you must install the free Arbi app on your device. Search for "Arbi Wonderbook" on the App Store (iPhone/iPad) or on Google Play (Android) and install it before scanning your book.',
         },
         {
           question: 'Does it work on iPad?',
