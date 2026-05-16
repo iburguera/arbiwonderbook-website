@@ -2,45 +2,82 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900 font-sans;
+    @apply bg-white text-gray-900;
+    font-family: 'Nunito', 'Poppins', sans-serif;
   }
 
   h1 {
-    @apply text-5xl md:text-6xl font-bold;
+    @apply text-5xl md:text-6xl font-extrabold leading-tight;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-bold;
+    @apply text-3xl md:text-4xl font-extrabold;
   }
 
   h3 {
-    @apply text-2xl font-bold;
+    @apply text-xl font-bold;
   }
 
   a {
-    @apply text-blue-600 hover:text-blue-800;
+    color: #1E90FF;
+  }
+  a:hover {
+    color: #FF8C00;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-block px-8 py-4 text-white font-bold rounded-lg hover:shadow-xl transition-shadow duration-300 no-underline;
-    background: linear-gradient(135deg, #1E90FF 0%, #32CD32 40%, #FFD700 70%, #FF8C00 100%);
+    @apply inline-block px-8 py-4 text-white font-extrabold rounded-xl transition-all duration-200 no-underline cursor-pointer border-0;
+    background-color: #1E90FF;
+  }
+  .btn-primary:hover {
+    background-color: #1a7de0;
+    @apply shadow-lg -translate-y-0.5;
+  }
+
+  .btn-green {
+    @apply inline-block px-8 py-4 text-white font-extrabold rounded-xl transition-all duration-200 no-underline cursor-pointer border-0;
+    background-color: #32CD32;
+  }
+  .btn-green:hover {
+    background-color: #28b228;
+    @apply shadow-lg -translate-y-0.5;
+  }
+
+  .btn-orange {
+    @apply inline-block px-8 py-4 text-white font-extrabold rounded-xl transition-all duration-200 no-underline cursor-pointer border-0;
+    background-color: #FF8C00;
+  }
+  .btn-orange:hover {
+    background-color: #e07c00;
+    @apply shadow-lg -translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply inline-block px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-300 no-underline;
+    @apply inline-block px-8 py-4 bg-white font-extrabold rounded-xl transition-all duration-200 no-underline cursor-pointer;
+    border: 2.5px solid #1E90FF;
+    color: #1E90FF;
+  }
+  .btn-secondary:hover {
+    background-color: #EFF6FF;
+    @apply shadow-md;
   }
 
   .container-section {
-    @apply max-w-6xl mx-auto px-4 py-20 md:py-32;
+    @apply max-w-6xl mx-auto px-4 py-16 md:py-24;
   }
 
   .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden;
   }
 
   .cta-strip {
-    @apply bg-gray-50 py-12 text-center border-t border-b border-gray-200;
+    @apply py-16 text-center;
+    background-color: #1E90FF;
+  }
+
+  .section-tag {
+    @apply inline-block text-sm font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4;
   }
 }
