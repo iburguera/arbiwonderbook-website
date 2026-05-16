@@ -87,10 +87,10 @@ export default function Home() {
           HERO
       ═══════════════════════════════════════════ */}
       <section style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="max-w-6xl mx-auto px-6 pt-14 pb-0 grid grid-cols-1 md:grid-cols-2 gap-10 items-end">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10" style={{ minHeight: '600px' }}>
 
           {/* Left copy */}
-          <div className="pb-14">
+          <div className="flex flex-col justify-center py-14">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-3">
               Magic books with{' '}
               <span style={{ color: '#1E90FF' }}>Augmented</span>{' '}
@@ -147,12 +147,11 @@ export default function Home() {
           </div>
 
           {/* Right — Hero image */}
-          <div className="relative flex justify-center items-end">
+          <div className="relative flex items-end justify-center overflow-hidden">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
-              className="w-full object-contain"
-              style={{ maxHeight: '520px' }}
+              className="w-full h-auto object-contain"
             />
             {/* App badge bottom-right */}
             <div className="absolute bottom-6 right-0 bg-white rounded-2xl shadow-lg border border-gray-100 px-4 py-3 flex flex-col items-center gap-1">
