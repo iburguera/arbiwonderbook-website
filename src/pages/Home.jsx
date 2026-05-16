@@ -86,11 +86,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HERO
       ═══════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10" style={{ minHeight: '600px' }}>
+      <section style={{ backgroundColor: '#FFFFFF', minHeight: '620px' }} className="relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 h-full" style={{ minHeight: '620px' }}>
 
           {/* Left copy */}
-          <div className="flex flex-col justify-center py-14">
+          <div className="flex flex-col justify-center py-14 z-10">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-3">
               Magic books with{' '}
               <span style={{ color: '#1E90FF' }}>Augmented</span>{' '}
@@ -146,15 +146,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — Hero image */}
-          <div className="relative flex items-end justify-center overflow-hidden">
+          {/* Right — Hero image, fills full column height */}
+          <div className="hidden md:block relative">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
-              className="w-full h-auto object-contain"
+              className="absolute bottom-0 right-0 w-full object-contain object-bottom"
+              style={{ height: '100%', maxWidth: '100%' }}
             />
             {/* App badge bottom-right */}
-            <div className="absolute bottom-6 right-0 bg-white rounded-2xl shadow-lg border border-gray-100 px-4 py-3 flex flex-col items-center gap-1">
+            <div className="absolute bottom-6 right-4 bg-white rounded-2xl shadow-lg border border-gray-100 px-4 py-3 flex flex-col items-center gap-1 z-10">
               <span className="text-xs font-extrabold text-gray-800">Free apps</span>
               <div className="flex gap-2 items-center mt-1">
                 <span className="text-xl">🟢</span>
