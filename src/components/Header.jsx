@@ -42,36 +42,3 @@ export default function Header() {
     </header>
   );
 }
-
-  return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <Link to="/" className="no-underline flex items-center">
-          <img src={arbiLogo} alt="Arbi" className="h-12 w-auto" />
-        </Link>
-        <div className="flex gap-6 md:gap-8 items-center">
-          {links.map((link) => (
-            <Link
-              key={link.label}
-              to={link.path}
-              className="no-underline font-bold text-sm md:text-base transition-colors duration-200 hidden md:block"
-              style={{ color: '#374151' }}
-              onMouseEnter={e => e.currentTarget.style.color = '#1E90FF'}
-              onMouseLeave={e => e.currentTarget.style.color = '#374151'}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href="https://amazon.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-sm px-5 py-2.5"
-          >
-            Buy on Amazon
-          </a>
-        </div>
-      </nav>
-    </header>
-  );
-}
