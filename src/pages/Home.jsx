@@ -87,10 +87,10 @@ export default function Home() {
           HERO
       ═══════════════════════════════════════════ */}
       <section style={{ backgroundColor: '#FFFFFF' }} className="relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center" style={{ minHeight: 'calc(100vh - 80px)', maxHeight: '800px' }}>
+        <div className="max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-2 items-center" style={{ minHeight: 'calc(100vh - 80px)', maxHeight: '800px' }}>
 
           {/* Left copy */}
-          <div className="flex flex-col justify-center py-14 text-center md:text-left z-10">
+          <div className="flex flex-col justify-center py-6 text-center md:text-left z-10">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-3">
               Magic books with{' '}
               <span style={{ color: '#1E90FF' }}>Augmented</span>{' '}
@@ -118,14 +118,14 @@ export default function Home() {
         </div>
 
         {/* Right — Hero image */}
-        <div className="absolute bottom-0 right-[-10%] w-full md:w-2/3 h-full pointer-events-none">
+        <div className="absolute bottom-0 right-0 w-full md:w-[62%] h-full pointer-events-none">
           <img
             src="/images/hero-visual.png"
             alt="ARBI augmented reality experience"
             className="absolute bottom-0 left-0 w-full h-auto object-cover"
             style={{
-              maskImage: 'linear-gradient(to top, transparent 5%, black 30%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 5%, black 30%)',
+              maskImage: 'linear-gradient(to top, transparent 3%, black 22%)',
+              WebkitMaskImage: 'linear-gradient(to top, transparent 3%, black 22%)',
             }}
           />
         </div>
