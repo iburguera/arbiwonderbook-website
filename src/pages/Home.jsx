@@ -86,11 +86,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HERO
       ═══════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center" style={{ minHeight: 'calc(100vh - 80px)', maxHeight: '720px' }}>
+      <section style={{ backgroundColor: '#FFFFFF' }} className="relative">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center" style={{ minHeight: 'calc(100vh - 80px)', maxHeight: '800px' }}>
 
           {/* Left copy */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center py-14 text-center md:text-left">
+          <div className="flex flex-col justify-center py-14 text-center md:text-left z-10">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-3">
               Magic books with{' '}
               <span style={{ color: '#1E90FF' }}>Augmented</span>{' '}
@@ -113,27 +113,18 @@ export default function Home() {
                 Download the app &#128242;
               </a>
             </div>
-
-            <div className="mt-8 flex items-center justify-center md:justify-start space-x-4 text-gray-500">
-              <div className="flex items-center">
-                <span className="text-sm">Free apps</span>
-              </div>
-              <div className="flex items-center">
-                <img src="https://img.icons8.com/color/24/000000/google-play.png" alt="Google Play" className="mr-1" />
-                <span className="text-sm">+ App Store</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-sm">Safe on Amazon</span>
-              </div>
-            </div>
           </div>
 
           {/* Right — Hero image */}
-          <div className="w-full md:w-1/2 h-full flex items-center justify-center">
+          <div className="absolute bottom-0 right-0 w-full md:w-1/2 h-full pointer-events-none">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
-              className="w-full h-full object-contain"
+              className="absolute bottom-0 left-0 w-full h-auto object-cover"
+              style={{
+                maskImage: 'linear-gradient(to top, transparent 0%, black 25%)',
+                WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 25%)',
+              }}
             />
           </div>
         </div>
