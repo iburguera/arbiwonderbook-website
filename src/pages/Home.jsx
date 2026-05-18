@@ -86,11 +86,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HERO
       ═══════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#FFFFFF', minHeight: '620px' }} className="relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 h-full" style={{ minHeight: '620px' }}>
+      <section style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center" style={{ minHeight: 'calc(100vh - 80px)', maxHeight: '720px' }}>
 
           {/* Left copy */}
-          <div className="flex flex-col justify-center py-14 z-10">
+          <div className="w-full md:w-1/2 flex flex-col justify-center py-14 text-center md:text-left">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-3">
               Magic books with{' '}
               <span style={{ color: '#1E90FF' }}>Augmented</span>{' '}
@@ -98,71 +98,43 @@ export default function Home() {
             </h1>
 
             <p className="text-xl font-extrabold mb-4" style={{ color: '#FFD700' }}>
-              ⭐ Your books come to life!
+              &#11088; Your books come to life!
             </p>
 
-            <p className="text-gray-600 mb-8 text-base leading-relaxed max-w-md">
-              Scan the pages with the free app and watch the characters leap into your world in
-              augmented reality. Available on Amazon.
+            <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto md:mx-0">
+              Scan the pages with the free app and watch the characters leap into your world in augmented reality. Available on Amazon.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-10">
-              <a
-                href="https://amazon.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-white font-extrabold rounded-xl text-base transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-md"
-                style={{ backgroundColor: '#1E90FF' }}
-              >
-                Buy on Amazon 🛒
+            <div className="flex justify-center md:justify-start space-x-4">
+              <a href="#books" className="btn-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105" style={{ backgroundColor: '#1E90FF' }}>
+                Buy on Amazon
               </a>
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center gap-2 px-7 py-3.5 font-extrabold rounded-xl text-base border-2 transition-all hover:bg-gray-50"
-                style={{ borderColor: '#1E90FF', color: '#1E90FF', backgroundColor: 'white' }}
-              >
-                Download the app ⬇️
+              <a href="#how-it-works" className="btn-secondary bg-white text-gray-800 font-bold py-3 px-6 rounded-lg border border-gray-300 shadow-lg transition-transform transform hover:scale-105">
+                Download the app &#128242;
               </a>
             </div>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-6 items-center">
-              <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5">
-                <span className="text-xl">📱</span>
-                <span className="text-xs font-extrabold text-gray-700">Free apps</span>
+            <div className="mt-8 flex items-center justify-center md:justify-start space-x-4 text-gray-500">
+              <div className="flex items-center">
+                <span className="text-sm">Free apps</span>
               </div>
-              <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5">
-                <span className="text-lg">🟢</span>
-                <span className="text-lg">🍎</span>
-                <div>
-                  <p className="text-xs font-extrabold text-gray-700 leading-tight">Google Play</p>
-                  <p className="text-xs text-gray-400 leading-tight">+ App Store</p>
-                </div>
+              <div className="flex items-center">
+                <img src="https://img.icons8.com/color/24/000000/google-play.png" alt="Google Play" className="mr-1" />
+                <span className="text-sm">+ App Store</span>
               </div>
-              <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5">
-                <span className="text-xl">🛡️</span>
-                <span className="text-xs font-extrabold text-gray-700">Safe on Amazon</span>
+              <div className="flex items-center">
+                <span className="text-sm">Safe on Amazon</span>
               </div>
             </div>
           </div>
 
-          {/* Right — Hero image, fills full column height */}
-          <div className="hidden md:block relative">
+          {/* Right — Hero image */}
+          <div className="w-full md:w-1/2 h-full flex items-center justify-center">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
-              className="absolute bottom-0 right-0 w-full object-contain object-bottom"
-              style={{ height: '100%', maxWidth: '100%' }}
+              className="w-full h-full object-contain"
             />
-            {/* App badge bottom-right */}
-            <div className="absolute bottom-6 right-4 bg-white rounded-2xl shadow-lg border border-gray-100 px-4 py-3 flex flex-col items-center gap-1 z-10">
-              <span className="text-xs font-extrabold text-gray-800">Free apps</span>
-              <div className="flex gap-2 items-center mt-1">
-                <span className="text-xl">🟢</span>
-                <span className="text-xl">🍎</span>
-              </div>
-              <span className="text-xs text-gray-400">Google Play + App Store</span>
-            </div>
           </div>
         </div>
       </section>
