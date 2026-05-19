@@ -731,7 +731,7 @@ export default function Home() {
           .marquee-track {
             display: flex;
             width: max-content;
-            animation: marquee 60s linear infinite;
+            animation: marquee 200s linear infinite;
           }
           .marquee-track:hover {
             animation-play-state: paused;
