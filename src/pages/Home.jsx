@@ -90,19 +90,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-2 items-center" style={{ minHeight: 'calc(100vh - 80px)', maxHeight: '800px' }}>
 
           {/* Left copy */}
-          <div className="flex flex-col justify-center py-6 text-center md:text-left z-10">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-3">
+          <div className="flex flex-col justify-center py- text-center md:text-left z-10">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-3">
               Magic books with{' '}
               <span style={{ color: '#1E90FF' }}>Augmented</span>{' '}
               <span style={{ color: '#32CD32' }}>Reality</span>
             </h1>
 
-            <p className="text-xl font-extrabold mb-4" style={{ color: '#FFD700' }}>
+            <p className="text-xl font-extrabold mb-4" style={{ color: '#FF8C00' }}>
               &#11088; Your books come to life!
             </p>
 
             <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto md:mx-0">
-              Scan the pages with the free app and watch the characters leap into your world in augmented reality. Available on Amazon.
+              Scan the pages with the free app to bring the characters to life in Augmented Reality. 
             </p>
 
             <div className="flex justify-center md:justify-start space-x-4">
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
 
         {/* Right — Hero image */}
-        <div className="absolute bottom-0 right-0 w-full md:w-[62%] h-full pointer-events-none">
+        <div className="absolute bottom-0 right-0 w-full md:w-[78%] h-full pointer-events-none">
           <img
             src="/images/hero-visual.png"
             alt="ARBI augmented reality experience"
