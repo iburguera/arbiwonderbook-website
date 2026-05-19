@@ -49,64 +49,221 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: 'Sarah M.',
-      role: 'Mom of 2',
+      name: 'A long way from home',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'My daughter asked to read every night after we got ARBI. The AR characters are absolutely magical!',
+      book: 'ARBI 1',
+      title: 'Wow wow wow — transported into 3D Arbi land!',
+      text: 'I love this book. Point the app camera at the pages and wow wow wow — you\'re transported into 3D Arbi land. The message about cooperation and teamwork is pure and not heavy-handed at all.',
     },
     {
-      name: 'Carlos R.',
-      role: 'Dad & teacher',
+      name: 'Deb',
+      role: 'EdTech Consultant · United States',
       stars: 5,
-      text: 'As a teacher I was skeptical, but ARBI genuinely improves reading engagement. My students love it.',
+      book: 'ARBI 1',
+      title: 'Even almost-teenagers were amazed',
+      text: 'I travel the world training teachers on AR and the ARBI books are incredible. I shared them with 6th and 7th graders and they were all amazed — even almost-teenagers. The AR grabbed their attention and the story values are exactly what our kids need.',
     },
     {
-      name: 'Emma L.',
-      role: 'Mom of 3',
+      name: 'Spencer in Seattle',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'We got both books and the kids fight over who gets to scan the pages first. Best purchase of the year.',
+      book: 'ARBI 1',
+      title: 'A mind-blowing reinvention of the book',
+      text: 'This is a mind-blowing reinvention of the book. When you look through the app, an incredible 3D world floats over every illustration. I showed it to a 10-year-old and a 35-year-old professor — both were blown away.',
     },
     {
-      name: 'Liam T.',
-      role: 'Dad of 1',
+      name: 'Sandy Sandmeyer',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'The moment the dragon appeared in AR my son\'s jaw dropped. He has never been so excited about a book.',
+      book: 'ARBI 1',
+      title: 'The most amazing book I\'ve ever seen',
+      text: 'ARBI is the most amazing book I\'ve ever seen. Point your device at the illustrations and the pictures actually come alive! A great story of friendship, teamwork and acceptance.',
     },
     {
-      name: 'Marta G.',
-      role: 'Mom & educator',
+      name: 'My Two Cents',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'I use ARBI in my classroom and the difference in engagement is night and day. Highly recommended.',
+      book: 'ARBI 1',
+      title: 'Takes reading to a WHOLE NEW LEVEL',
+      text: 'I have never in my life seen anything this cool! The app takes reading to a WHOLE NEW LEVEL. Any child would enjoy the book as is, but adding the AR literally brings it to life right before your eyes.',
     },
     {
-      name: 'James P.',
-      role: 'Dad of 2',
+      name: 'Jocelyn',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'Finally a book where my kids put the tablet DOWN to read. The AR app is the perfect bridge.',
+      book: 'ARBI 1',
+      title: 'The characters literally come to life',
+      text: 'I really enjoyed reading this story and watching the book come alive with my smartphone — the illustrations became 3D. Children of all ages will love this book about teamwork and never giving up.',
     },
     {
-      name: 'Sofia V.',
-      role: 'Mom of 4',
+      name: 'Dr. Cary',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'All four of my children love it, from age 4 to 10. The stories and values are beautifully done.',
+      book: 'ARBI 1',
+      title: 'Like pop-up 3D books, only BETTER!',
+      text: 'My 5-year-old nephew loved this and would not put it down for hours. It\'s like pop-up 3D books only BETTER! He read it several more times — only stopping when the iPad battery ran out.',
     },
     {
-      name: 'Noah K.',
-      role: 'Dad & librarian',
+      name: 'SueKich',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'I\'ve recommended ARBI to every parent at our library. It\'s the future of children\'s books, today.',
+      book: 'ARBI 1',
+      title: 'Knights and dragons spring to life on screen',
+      text: 'I was absolutely bowled over by this brilliant idea. Just pop the free app onto your phone, hold it above the illustrations, and knights, cats and fire-breathing dragons all spring to life on screen.',
     },
     {
-      name: 'Isabella F.',
-      role: 'Mom of 2',
+      name: 'Matthew Scott Baker',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'We read it in Spanish and English. Fantastic for bilingual families. Our kids switch languages naturally now.',
+      book: 'ARBI 1',
+      title: 'A breakthrough in children\'s literature',
+      text: 'ARBI is a breakthrough in children\'s literature. This augmented-reality storytelling will enthrall readers of all ages. I found no flaws in the programming nor in the story — I would love to see this used in classrooms.',
     },
     {
-      name: 'Lucas B.',
-      role: 'Uncle & gift-giver',
+      name: 'Richard and Liz',
+      role: 'Verified Purchase · United States',
+      stars: 4,
+      book: 'ARBI 1',
+      title: 'TOTALLY COOL — the dragon flies off the page',
+      text: 'Although you can read this book without the app, your kids will get WAY more fun seeing the pictures come to life! Point the camera 12-24 inches away — the dragon flies off the page. Yes, it is pretty amazing! TOTALLY COOL augmented reality book.',
+    },
+    {
+      name: 'WDC',
+      role: 'Verified Purchase · United States',
       stars: 5,
-      text: 'Bought it as a gift and the parents texted me immediately — their kid wouldn\'t go to sleep without it.',
+      book: 'ARBI 1',
+      title: 'The Dragon flies around the sky — really cool',
+      text: 'The illustrations are very colorful and well drawn. When you point the camera at the page the drawing comes to life in 3D — the Knight climbs a wall, the Dragon flies around the sky. I have no idea how this works, but it is really cool.',
+    },
+    {
+      name: 'Night Owl Romance',
+      role: 'Verified Purchase · United States',
+      stars: 4,
+      book: 'ARBI 1',
+      title: 'Merges story with augmented reality beautifully',
+      text: 'A very cool children\'s book that merges story with augmented reality. The 3D art brings the story to life. Available in a variety of languages — a huge plus. The technology in children\'s books is way awesome.',
+    },
+    {
+      name: 'AmazonReviewMaster',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'My 4-year-old son couldn\'t get enough',
+      text: 'I have a 4-year-old son and he loved this book! The animated 3D scenes are tracked to the book, so if you move the book the figures turn with it. My son couldn\'t get enough and was intrigued at how augmented reality worked.',
+    },
+    {
+      name: 'Sara Spears',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'Like a digital pop-up book — I was blown away',
+      text: 'This is the first time I ever saw an augmented reality book and I was blown away. The book itself is cute and colorful with a great message about forgiveness. I hovered my phone over the book and it came to life — like a digital pop-up book.',
+    },
+    {
+      name: 'reg',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'Perfect for children learning to read',
+      text: 'I have 8 grandchildren and I thought this would be great to share with them. The pictures are delightful. This will be an excellent transition from a traditional picture book to a chapter book — perfect for children learning to read.',
+    },
+    {
+      name: 'Phyllis Staff',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'A story children everywhere need right now',
+      text: 'Load the app, point the camera at a page, and watch the action begin. Not only do I love the AR, I love the story where fear and fighting is turned to cooperation and joy. It\'s a story children everywhere need now more than ever.',
+    },
+    {
+      name: 'Roy',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'My son was blown away by the app',
+      text: 'This book is written at a just-comfortable reading level for a 1st grader. My son loved the story before seeing the cool iPad app — and was blown away by the app. A wonderfully written and well illustrated story.',
+    },
+    {
+      name: 'shuTTL3bus',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'Teamwork, redemption and incredible AR',
+      text: 'Great little book on its own — first rate artwork and a well written story. The AR was a nice feature and my 7 and 6-year-old children were thrilled. The story teaches teamwork and redemption, which are admirable traits.',
+    },
+    {
+      name: 'JNG',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'Absolutely the coolest book we\'ve read',
+      text: 'Absolutely the coolest book I have read with the kids. I find myself reading it just to look at the 3D effects. My nieces and nephews aged 7 and 9 had a ball — even my toddler enjoyed it. We absolutely love it!',
+    },
+    {
+      name: 'Pau B.',
+      role: 'Verified Purchase · Spain',
+      stars: 5,
+      book: 'ARBI 1',
+      title: 'Regalo perfecto para los peques',
+      text: 'Un regalo perfecto para los peques. Historia con moraleja e ilustración AR muy cuidada. Una opción genial para que los niños lean, se diviertan y usen las nuevas tecnologías. ¡Habrá que hacerse con el capítulo 2!',
+    },
+    // ── ARBI 2 ──────────────────────────────────────────────────
+    {
+      name: 'A long way from home',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 2',
+      title: 'If you don\'t know Arbi, you\'re missing out',
+      text: 'I was a huge fan of the original Arbi book. The theme is similar but our heroes find a new predicament — the message of cooperation comes through loud and clear. And the AR now has SOUND on every page. So so so engaging that at times it competes with the story!',
+    },
+    {
+      name: 'Richard and Liz',
+      role: 'Verified Purchase · United States',
+      stars: 4,
+      book: 'ARBI 2',
+      title: 'Aargh! There be pirates after the treasure!',
+      text: 'Totally cool is way too tame a phrase for the Arbi books. The pages literally come alive — Drako flies, characters move and there is music in the background. Your kids will LOVE this book!',
+    },
+    {
+      name: 'Deb',
+      role: 'EdTech Consultant · United States',
+      stars: 5,
+      book: 'ARBI 2',
+      title: 'Storyline as well written as the AR itself',
+      text: 'The second book continues the story in a new adventure — pirates, a treasure chest, and the lesson that family and friendship are the best treasure of all. The AR pulled these students in and held their attention the entire time. Excellent gifts for kids of all ages!',
+    },
+    {
+      name: 'Piaras',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 2',
+      title: 'An amazing book that literally comes to life!',
+      text: 'What sets this book apart is the augmented reality — it joins the physical and virtual world in a way I\'ve never seen before. Magnificent illustrations and incredible challenges. Not only did I find this amazing, but my grandchildren did too. My two grandchildren and I absolutely adored this book!',
+    },
+    {
+      name: 'Spencer in Seattle',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 2',
+      title: 'What happens when books bleed into video animation?',
+      text: 'The first book is on the page, the other is a 3D animation that appears when you point the camera at the book — it really comes to life via the app. This book stands alone as a nice kids book: adventure, a treasure map, magical pirates and the return of the kind dragon. Really well made.',
+    },
+    {
+      name: 'Jocelyn',
+      role: 'Verified Purchase · United States',
+      stars: 4,
+      book: 'ARBI 2',
+      title: 'Adorable and well-made — even better than the first',
+      text: 'I loved the first book and when offered the second I was delighted! The author makes an amazing storyline that children can appreciate and that literally comes to life. I love how the meaning of the story, cute graphics and characters all come together. Recommended for everyone!',
+    },
+    {
+      name: 'Amazon Customer',
+      role: 'Verified Purchase · United States',
+      stars: 5,
+      book: 'ARBI 2',
+      title: 'AWESOME — outstanding augmented reality book',
+      text: 'ARBI and the Treasure Chest is the most amazing book I\'ve ever seen. By using augmented reality, your child\'s books literally come alive. Point your device at the images and MAGIC — the pictures come to life. Available in 9 languages. This IS the new way to read and engage with your child.',
     },
   ];
 
@@ -594,12 +751,26 @@ export default function Home() {
                   className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col mx-3 flex-shrink-0"
                   style={{ width: '260px' }}
                 >
-                  <div className="flex gap-0.5 mb-2">
-                    {Array.from({ length: t.stars }).map((_, i) => (
-                      <span key={i} className="text-sm" style={{ color: '#FFD700' }}>★</span>
-                    ))}
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: t.stars }).map((_, i) => (
+                        <span key={i} className="text-sm" style={{ color: '#FFD700' }}>★</span>
+                      ))}
+                    </div>
+                    <span
+                      className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                      style={{
+                        background: t.book === 'ARBI 2' ? '#32CD3220' : '#1E90FF20',
+                        color: t.book === 'ARBI 2' ? '#32CD32' : '#1E90FF',
+                      }}
+                    >
+                      {t.book}
+                    </span>
                   </div>
-                  <p className="text-gray-600 text-xs leading-relaxed flex-1 mb-3 italic">
+                  {t.title && (
+                    <p className="font-bold text-gray-800 text-xs mb-1 leading-snug">{t.title}</p>
+                  )}
+                  <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-3 italic">
                     "{t.text}"
                   </p>
                   <div className="border-t border-gray-100 pt-3">
