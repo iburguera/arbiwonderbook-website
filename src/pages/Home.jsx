@@ -556,7 +556,9 @@ export default function Home() {
                     "{t.text}"
                   </p>
                   <div className="border-t border-gray-100 pt-3">
-                    <p className="font-extrabold text-gray-900 text-xs">{t.name}</p>
+                    <p className="font-extrabold text-gray-900 text-xs">
+                      {t.flag && <span className="mr-1">{t.flag}</span>}{t.name}
+                    </p>
                     <p className="text-xs text-gray-400">{t.role}</p>
                   </div>
                 </div>
