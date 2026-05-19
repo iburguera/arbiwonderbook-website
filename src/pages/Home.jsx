@@ -402,6 +402,37 @@ export default function Home() {
 
           </div>{/* /grid */}
 
+          {/* Video demo */}
+          <div className="mt-20 pt-20 border-t border-gray-200">
+            <div className="text-center mb-10">
+              <span
+                className="inline-block text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full text-white mb-4"
+                style={{ backgroundColor: '#1E90FF' }}
+              >
+                🎬 See it in action
+              </span>
+              <h3 className="text-3xl font-extrabold text-gray-900 mt-2 mb-2">Watch the magic happen</h3>
+              <p className="text-gray-500 max-w-2xl mx-auto">See exactly how children experience the Augmented Reality with their ARBI books</p>
+            </div>
+            
+            {/* Video container */}
+            <div className="max-w-3xl mx-auto">
+              <div
+                className="relative w-full rounded-3xl overflow-hidden shadow-2xl bg-black"
+                style={{ aspectRatio: '16/9' }}
+              >
+                <video
+                  controls
+                  className="w-full h-full"
+                  style={{ display: 'block', objectFit: 'contain' }}
+                >
+                  <source src="./videos/how-it-works.mp4" type="video/mp4" />
+                  <p>Your browser does not support the video tag.</p>
+                </video>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

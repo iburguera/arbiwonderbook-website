@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import arbiLogo from '../assets/ArbiNewLogo.webp';
+import arbiLogo from '../assets/ArbiNewLogo.png';
+import amazonWhiteIcon from '../assets/amazon-white-icon.webp';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,9 +32,28 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-bold mb-4">Shop</h4>
-            <a href="https://amazon.com" target="_blank" rel="noopener noreferrer" className="btn-primary block text-center">
-              View on Amazon
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://amazon.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-white font-extrabold rounded-xl text-sm transition-all hover:opacity-90"
+                style={{ backgroundColor: '#1E90FF' }}
+              >
+                <img src={amazonWhiteIcon} alt="Amazon" style={{ width: '14px', height: '14px', objectFit: 'contain' }} />
+                Get Book 1
+              </a>
+              <a
+                href="https://amazon.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-white font-extrabold rounded-xl text-sm transition-all hover:opacity-90"
+                style={{ backgroundColor: '#32CD32' }}
+              >
+                <img src={amazonWhiteIcon} alt="Amazon" style={{ width: '14px', height: '14px', objectFit: 'contain' }} />
+                Get Book 2
+              </a>
+            </div>
           </div>
         </div>
         <div className="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
