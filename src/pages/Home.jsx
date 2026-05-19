@@ -34,7 +34,7 @@ function VideoCard({ v }) {
         ) : (
           <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${v.color}22, ${v.color}55)` }} />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent z-10" />
         {!v.src && (
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
@@ -79,8 +79,8 @@ export default function Home() {
 
   const videos = [
     { name: 'Sofia & her dragon 🐉', flag: '🇺🇸', color: '#1E90FF', src: '/videos/video-review-1.mp4' },
-    { name: 'Lucas primera vez 🤩', flag: '🇪🇸', color: '#32CD32', src: '/videos/video-review-2.mp4' },
-    { name: 'Primera reacción 🤯', flag: '🇪🇸', color: '#FFD700', src: '/videos/video-review-6.mp4', featured: true },
+    { name: 'Lucas primera vez 🤩', flag: '🇪🇸', color: '#32CD32', src: '/videos/video-review-11.mp4' },
+    { name: 'Primera reacción 🤯', flag: '🇪🇸', color: '#FFD700', src: '/videos/video-review-6.mp4' },
     { name: 'The Johnson family 📖', flag: '🇬🇧', color: '#FF8C00', src: '/videos/video-review-3.mp4' },
     { name: 'Lena liest mit AR 🌟', flag: '🇩🇪', color: '#1E90FF', src: '/videos/video-review-4.mp4' },
     { name: 'Mia découvre ARBI ✨', flag: '🇫🇷', color: '#32CD32', src: '/videos/video-review-5.mp4' },
@@ -432,7 +432,7 @@ export default function Home() {
                   className="w-full h-full"
                   style={{ display: 'block', objectFit: 'contain' }}
                 >
-                  <source src="./videos/how-it-works.mp4" type="video/mp4" />
+                  <source src="./videos/how-it-works-new.mp4" type="video/mp4" />
                   <p>Your browser does not support the video tag.</p>
                 </video>
               </div>
