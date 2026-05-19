@@ -429,6 +429,7 @@ export default function Home() {
               >
                 <video
                   controls
+                  muted
                   className="w-full h-full"
                   style={{ display: 'block', objectFit: 'contain' }}
                 >
