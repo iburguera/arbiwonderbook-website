@@ -3,9 +3,9 @@ import arbiLogo from '../assets/ArbiNewLogo.png';
 
 export default function Header() {
   const links = [
-    { label: 'Books', path: '/#books' },
     { label: 'How It Works', path: '/#how-it-works' },
-    { label: 'Apps', path: '/#how-it-works' },
+    { label: 'Books', path: '/#books' },
+    { label: 'Reviews', path: '/#reviews' },
     { label: 'FAQ', path: '/faq' },
   ];
 
