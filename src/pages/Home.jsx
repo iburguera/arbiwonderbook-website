@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import amazonWhiteIcon from '../assets/amazon-white-icon.webp';
 import arbi1Book from '../assets/arbi1-book.jpg';
 import arbi2Book from '../assets/arbi2-book.jpg';
@@ -6,6 +7,23 @@ import arbi2Icon from '../assets/arbi2-icon.png';
 import instruction3 from '../assets/instruction-3.webp';
 
 export default function Home() {
+  const [videoPage, setVideoPage] = useState(0);
+
+  const videos = [
+    { name: 'Sofia & her dragon 🐉', flag: '🇺🇸', color: '#1E90FF' },
+    { name: 'Lucas primera vez 🤩', flag: '🇪🇸', color: '#32CD32' },
+    { name: 'The Johnson family 📖', flag: '🇬🇧', color: '#FF8C00' },
+    { name: 'Mia découvre ARBI ✨', flag: '🇫🇷', color: '#FFD700' },
+    { name: 'Lena liest mit AR 🌟', flag: '🇩🇪', color: '#1E90FF' },
+    { name: 'Familia Torres 💛', flag: '🇲🇽', color: '#32CD32' },
+    { name: 'Emma first scan 😱', flag: '🇦🇺', color: '#FF8C00' },
+    { name: 'Ahmed & Arbi 🦄', flag: '🇦🇪', color: '#FFD700' },
+    { name: 'Les enfants adorent 💙', flag: '🇧🇪', color: '#1E90FF' },
+    { name: 'Noah can\'t stop! 🔥', flag: '🇨🇦', color: '#32CD32' },
+  ];
+  const VIDEOS_PER_PAGE = 5;
+  const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
+
   const values1 = [
     { icon: '🤝', title: 'Teamwork', desc: 'Arbi and friends can only defeat the dragon by working together.' },
     { icon: '💬', title: 'Communication', desc: 'Talking openly and listening is key to solving any problem.' },
@@ -34,19 +52,61 @@ export default function Home() {
       name: 'Sarah M.',
       role: 'Mom of 2',
       stars: 5,
-      text: 'My daughter asked to read every single night after we got ARBI. The AR characters are absolutely magical — she was speechless the first time they jumped off the page!',
+      text: 'My daughter asked to read every night after we got ARBI. The AR characters are absolutely magical!',
     },
     {
       name: 'Carlos R.',
       role: 'Dad & teacher',
       stars: 5,
-      text: 'As a teacher I was skeptical, but ARBI genuinely improves reading engagement. My students who struggle with reading are now the most excited ones in class.',
+      text: 'As a teacher I was skeptical, but ARBI genuinely improves reading engagement. My students love it.',
     },
     {
       name: 'Emma L.',
       role: 'Mom of 3',
       stars: 5,
-      text: 'We got both books and the kids fight over who gets to scan the pages first. Best purchase of the year. The values in the stories are exactly what I want my children to learn.',
+      text: 'We got both books and the kids fight over who gets to scan the pages first. Best purchase of the year.',
+    },
+    {
+      name: 'Liam T.',
+      role: 'Dad of 1',
+      stars: 5,
+      text: 'The moment the dragon appeared in AR my son\'s jaw dropped. He has never been so excited about a book.',
+    },
+    {
+      name: 'Marta G.',
+      role: 'Mom & educator',
+      stars: 5,
+      text: 'I use ARBI in my classroom and the difference in engagement is night and day. Highly recommended.',
+    },
+    {
+      name: 'James P.',
+      role: 'Dad of 2',
+      stars: 5,
+      text: 'Finally a book where my kids put the tablet DOWN to read. The AR app is the perfect bridge.',
+    },
+    {
+      name: 'Sofia V.',
+      role: 'Mom of 4',
+      stars: 5,
+      text: 'All four of my children love it, from age 4 to 10. The stories and values are beautifully done.',
+    },
+    {
+      name: 'Noah K.',
+      role: 'Dad & librarian',
+      stars: 5,
+      text: 'I\'ve recommended ARBI to every parent at our library. It\'s the future of children\'s books, today.',
+    },
+    {
+      name: 'Isabella F.',
+      role: 'Mom of 2',
+      stars: 5,
+      text: 'We read it in Spanish and English. Fantastic for bilingual families. Our kids switch languages naturally now.',
+    },
+    {
+      name: 'Lucas B.',
+      role: 'Uncle & gift-giver',
+      stars: 5,
+      text: 'Bought it as a gift and the parents texted me immediately — their kid wouldn\'t go to sleep without it.',
     },
   ];
 
@@ -83,7 +143,7 @@ export default function Home() {
 
             <div className="flex justify-center md:justify-start space-x-4">
               <a href="#books" className="btn-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105" style={{ backgroundColor: '#1E90FF' }}>
-                Buy on Amazon
+                Buy it on Amazon
               </a>
               <a href="#how-it-works" className="btn-secondary bg-white text-gray-800 font-bold py-3 px-6 rounded-lg border border-gray-300 shadow-lg transition-transform transform hover:scale-105">
                 How it works &#128242;
@@ -450,9 +510,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           TESTIMONIALS
       ═══════════════════════════════════════════ */}
-      <section id="reviews" style={{ backgroundColor: '#FAFAF5' }} className="py-20">
+      <section id="reviews" style={{ backgroundColor: '#FAFAF5' }} className="py-20 overflow-hidden">
+
+        {/* Header */}
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span
               className="inline-block text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full text-white mb-4"
               style={{ backgroundColor: '#1E90FF' }}
@@ -460,79 +522,163 @@ export default function Home() {
               ⭐ Reviews
             </span>
             <h2 className="text-4xl font-extrabold text-gray-900 mt-2">Families love ARBI</h2>
-            <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-              Real families, real reactions. See what happens when children open an ARBI book for the first time.
-            </p>
-          </div>
-
-          {/* Written testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mb-14">
-            {testimonials.map((t, idx) => {
-              const avatarColors = ['#1E90FF', '#32CD32', '#FF8C00'];
-              const color = avatarColors[idx % avatarColors.length];
-              const initials = t.name.split(' ').map(n => n[0]).join('');
-              return (
-                <div
-                  key={t.name}
-                  className="bg-white rounded-3xl p-7 shadow-md border border-gray-100 flex flex-col hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                >
-                  {/* Quote mark */}
-                  <div className="text-5xl font-black leading-none mb-3" style={{ color: color + '30' }}>"</div>
-
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {Array.from({ length: t.stars }).map((_, i) => (
-                      <span key={i} className="text-lg" style={{ color: '#FFD700' }}>★</span>
-                    ))}
-                  </div>
-
-                  {/* Text */}
-                  <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-6">
-                    {t.text}
-                  </p>
-
-                  {/* Author */}
-                  <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-white font-extrabold text-sm flex-shrink-0"
-                      style={{ backgroundColor: color }}
-                    >
-                      {initials}
-                    </div>
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm">{t.name}</p>
-                      <p className="text-xs text-gray-400">{t.role}</p>
-                    </div>
-                    <span
-                      className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: color + '15', color: color }}
-                    >
-                      ✓ Verified
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Video reviews placeholder */}
-          <div className="text-center mb-8">
-            <p className="text-sm font-extrabold text-gray-400 uppercase tracking-widest">📹 Video reviews from Amazon customers</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="rounded-2xl bg-white flex flex-col items-center justify-center border-2 border-dashed border-gray-200 p-10 hover:border-blue-300 transition-colors cursor-pointer"
-                style={{ aspectRatio: '16/9' }}
-              >
-                <div className="text-4xl mb-2">🎬</div>
-                <p className="text-sm font-extrabold text-gray-500">Video review {i}</p>
-                <p className="text-xs text-gray-400 text-center mt-1">Coming soon</p>
+            <div className="flex items-center justify-center gap-2 mt-3">
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="text-xl" style={{ color: '#FFD700' }}>★</span>
+                ))}
               </div>
-            ))}
+              <span className="font-extrabold text-gray-900">4.9</span>
+              <span className="text-gray-400 text-sm">· +47 verified reviews on Amazon</span>
+            </div>
           </div>
         </div>
+
+        {/* Marquee carousel */}
+        <style>{`
+          @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 60s linear infinite;
+          }
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+
+        <div className="relative mb-14">
+          {/* Fade edges */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
+
+          <div className="overflow-hidden -mt-10">
+            <div className="marquee-track py-3">
+              {[...testimonials, ...testimonials].map((t, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col mx-3 flex-shrink-0"
+                  style={{ width: '260px' }}
+                >
+                  <div className="flex gap-0.5 mb-2">
+                    {Array.from({ length: t.stars }).map((_, i) => (
+                      <span key={i} className="text-sm" style={{ color: '#FFD700' }}>★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-xs leading-relaxed flex-1 mb-3 italic">
+                    "{t.text}"
+                  </p>
+                  <div className="border-t border-gray-100 pt-3">
+                    <p className="font-extrabold text-gray-900 text-xs">{t.name}</p>
+                    <p className="text-xs text-gray-400">{t.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Video reviews */}
+        <div className="max-w-6xl mx-auto px-6 -mt-10">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="h-px flex-1 bg-gray-200" />
+            <p className="text-sm font-extrabold text-gray-400 uppercase tracking-widest whitespace-nowrap">📹 Real customers. Real reactions.</p>
+            <div className="h-px flex-1 bg-gray-200" />
+          </div>
+          <p className="text-center text-xs text-gray-400 mb-8">Families filming their children's first ARBI experience</p>
+
+          {/* Video carousel — true sliding strip */}
+          <div className="relative">
+
+            {/* Gradient masks — hint more content on each side */}
+            {videoPage > 0 && (
+              <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-20" style={{ background: 'linear-gradient(to right, #FAFAF5 20%, transparent)' }} />
+            )}
+            {videoPage < totalPages - 1 && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-20" style={{ background: 'linear-gradient(to left, #FAFAF5 20%, transparent)' }} />
+            )}
+
+            {/* Left arrow */}
+            {videoPage > 0 && (
+              <button
+                onClick={() => setVideoPage(p => p - 1)}
+                className="absolute -left-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-shadow"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E90FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+              </button>
+            )}
+
+            {/* Right arrow */}
+            {videoPage < totalPages - 1 && (
+              <button
+                onClick={() => setVideoPage(p => p + 1)}
+                className="absolute -right-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center hover:shadow-xl transition-shadow"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E90FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+              </button>
+            )}
+
+            {/* Overflow window */}
+            <div className="overflow-hidden">
+              {/* Sliding strip — all pages side by side */}
+              <div
+                style={{
+                  display: 'flex',
+                  width: `${totalPages * 100}%`,
+                  transform: `translateX(-${videoPage * (100 / totalPages)}%)`,
+                  transition: 'transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1)',
+                }}
+              >
+                {Array.from({ length: totalPages }).map((_, pageIdx) => (
+                  <div key={pageIdx} style={{ width: `${100 / totalPages}%`, flexShrink: 0 }}>
+                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
+                      {videos.slice(pageIdx * VIDEOS_PER_PAGE, (pageIdx + 1) * VIDEOS_PER_PAGE).map((v, i) => (
+                        <div
+                          key={pageIdx * VIDEOS_PER_PAGE + i}
+                          className="relative rounded-2xl overflow-hidden cursor-pointer group bg-gray-100"
+                          style={{ aspectRatio: '9/16' }}
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10" />
+                          <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${v.color}22, ${v.color}55)` }} />
+                          <div className="absolute inset-0 flex items-center justify-center z-20">
+                            <div className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200">
+                              <div className="w-0 h-0 ml-0.5" style={{ borderTop: '6px solid transparent', borderBottom: '6px solid transparent', borderLeft: '10px solid #1E90FF' }} />
+                            </div>
+                          </div>
+                          <div className="absolute bottom-0 left-0 right-0 z-20 p-2">
+                            <p className="text-white text-[10px] font-bold leading-tight">{v.flag} {v.name}</p>
+                            <div className="flex gap-0.5 mt-1">
+                              {Array.from({ length: 5 }).map((_, s) => (
+                                <span key={s} className="text-[10px]" style={{ color: '#FFD700' }}>★</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-5">
+            {Array.from({ length: totalPages }).map((_, p) => (
+              <button
+                key={p}
+                onClick={() => setVideoPage(p)}
+                className="w-2 h-2 rounded-full transition-all"
+                style={{ backgroundColor: p === videoPage ? '#1E90FF' : '#D1D5DB' }}
+              />
+            ))}
+          </div>
+          {/* <p className="text-center text-xs text-gray-400 mt-3">{videos.length} video reviews</p> */}
+        </div>
+
       </section>
 
       {/* ═══════════════════════════════════════════
@@ -575,7 +721,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           LANGUAGES
       ═══════════════════════════════════════════ */}
-      <section className="max-w-5xl mx-auto px-6 py-16 text-center">
+      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-3">One story. Eight languages.</h2>
         <p className="text-gray-500 mb-10 max-w-xl mx-auto">
           ARBI books are available in 8 languages — perfect for multilingual families and bilingual classrooms.
@@ -601,7 +747,7 @@ export default function Home() {
           <h2 className="text-4xl font-extrabold text-white mb-4">
             Ready to start the adventure?
           </h2>
-          <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: '#cce7ff' }}>
+          <p className="text-lg mb-10 max-w-2xl mx-auto" style={{ color: '#cce7ff' }}>
             Give your child a story they will never forget — with values that will stay with
             them forever. Available now on Amazon. App is 100% free.
           </p>
@@ -613,18 +759,15 @@ export default function Home() {
               className="inline-block px-8 py-4 bg-white font-extrabold rounded-xl hover:shadow-xl transition-all text-base"
               style={{ color: '#1E90FF' }}
             >
-              Buy on Amazon 🛒
+              Get them on Amazon now
             </a>
-            <a
+            {/* <a
               href="/faq"
               className="inline-block px-8 py-4 font-extrabold rounded-xl border-2 border-white text-white hover:bg-blue-600 transition-all text-base"
             >
               Read the FAQ
-            </a>
+            </a> */}
           </div>
-          <p className="text-sm mt-6" style={{ color: '#99d3ff' }}>
-            📱 Free app on App Store &amp; Google Play
-          </p>
         </div>
       </section>
 
