@@ -565,14 +565,14 @@ export default function Home() {
               ⭐ Reviews
             </span>
             <h2 className="text-4xl font-extrabold text-gray-900 mt-2">Families love ARBI</h2>
-            <div className="flex items-center justify-center gap-2 mt-3">
+            <div className="flex items-center justify-center gap-2 mt-3 mb-4">
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <span key={i} className="text-xl" style={{ color: '#FFD700' }}>★</span>
                 ))}
               </div>
               <span className="font-extrabold text-gray-900">4.9</span>
-              <span className="text-gray-400 text-sm mb-4">· +47 verified Reviews</span>
+              <span className="text-gray-400 text-sm">· +47 verified Reviews</span>
             </div>
           </div>
         </div>
