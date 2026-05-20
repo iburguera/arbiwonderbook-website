@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Hide scrollbar for native swipe carousels */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+
 @layer base {
   body {
     @apply bg-white text-gray-900;

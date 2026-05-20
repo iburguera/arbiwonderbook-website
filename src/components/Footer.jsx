@@ -6,9 +6,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 border-t border-gray-200 mt-20">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-gray-100 border-t border-gray-200 mt-10 md:mt-20">
+      <div className="max-w-6xl mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
             <img src={arbiLogo} alt="Arbi" className="h-10 w-auto mb-3" />
             <p className="text-sm text-gray-600">
