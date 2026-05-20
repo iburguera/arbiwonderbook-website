@@ -572,7 +572,7 @@ export default function Home() {
                 ))}
               </div>
               <span className="font-extrabold text-gray-900">4.9</span>
-              <span className="text-gray-400 text-sm mb-4">· +47 verified Amazon Reviews</span>
+              <span className="text-gray-400 text-sm mb-4">· +47 verified Reviews</span>
             </div>
           </div>
         </div>
