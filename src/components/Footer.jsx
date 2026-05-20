@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
-          <p>&copy; {currentYear} Arbi. All rights reserved.</p>
+          <p>&copy; {currentYear} ARBI. All rights reserved.</p>
         </div>
       </div>
     </footer>
