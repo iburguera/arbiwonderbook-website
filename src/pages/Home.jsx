@@ -433,7 +433,7 @@ export default function Home() {
                   className="w-full h-full"
                   style={{ display: 'block', objectFit: 'contain' }}
                 >
-                  <source src="./videos/how-it-works-new.mp4" type="video/mp4" />
+                  <source src="./videos/how-it-works.mp4" type="video/mp4" />
                   <p>Your browser does not support the video tag.</p>
                 </video>
               </div>
