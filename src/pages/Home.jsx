@@ -169,7 +169,7 @@ export default function Home() {
         </div>
 
         {/* ── Mobile hero ── */}
-        <div className="md:hidden flex flex-col items-center text-center px-5 pt-8 pb-0" style={{ minHeight: '88vh' }}>
+        <div className="md:hidden flex flex-col items-center text-center px-5 pt-8 pb-0">
           <h1 className="text-[2rem] font-extrabold leading-snug mb-2">
             <span
               style={{
@@ -184,7 +184,7 @@ export default function Home() {
           <p className="text-sm text-gray-500 mb-4 max-w-xs">
             Scan pages with the free app and see characters in <strong style={{ color: '#32CD32' }}>Augmented Reality</strong>.
           </p>
-          <div className="flex gap-3 mb-0">
+          <div className="flex gap-3 mb-4">
             <a href="#books" className="text-white font-bold py-3 px-5 rounded-xl shadow-lg text-sm" style={{ backgroundColor: '#1E90FF' }}>
               Buy on Amazon
             </a>
@@ -192,16 +192,14 @@ export default function Home() {
               How it works &#128242;
             </a>
           </div>
-          <div className="relative w-full mx-auto flex-1 flex items-end" style={{ marginTop: '-1rem' }}>
+          <div className="relative w-screen -mx-5">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
               className="w-full"
               style={{
-                transform: 'scale(1.18)',
-                transformOrigin: 'bottom center',
-                maskImage: 'linear-gradient(to top, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 14%)',
-                WebkitMaskImage: 'linear-gradient(to top, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 14%)',
+                maskImage: 'linear-gradient(to top, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 8%)',
+                WebkitMaskImage: 'linear-gradient(to top, transparent 2%, black 20%), linear-gradient(to left, transparent 0%, black 8%)',
                 maskComposite: 'intersect',
                 WebkitMaskComposite: 'source-in',
               }}
