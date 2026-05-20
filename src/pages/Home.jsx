@@ -198,9 +198,9 @@ export default function Home() {
               alt="ARBI augmented reality experience"
               style={{
                 width: '100%',
-                height: '420px',
+                height: '390px',
                 objectFit: 'cover',
-                objectPosition: 'center top',
+                objectPosition: '92% top',
                 maskImage: 'linear-gradient(to top, transparent 4%, black 30%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to right, transparent 0%, black 12%)',
                 WebkitMaskImage: 'linear-gradient(to top, transparent 4%, black 30%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to right, transparent 0%, black 12%)',
                 maskComposite: 'intersect',
