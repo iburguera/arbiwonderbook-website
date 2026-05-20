@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import amazonWhiteIcon from '../assets/amazon-white-icon.webp';
 import arbi1Book from '../assets/arbi1-book.jpg';
 import arbi2Book from '../assets/arbi2-book.jpg';
@@ -69,6 +69,63 @@ function VideoCard({ v }) {
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function MobileVideoMarquee({ videos }) {
+  const scrollRef = useRef(null);
+  const animRef = useRef(null);
+  const isPaused = useRef(false);
+  // ~0.28px/frame at 60fps ≈ same visual speed as 400s CSS marquee
+  const SPEED = 0.28;
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const half = el.scrollWidth / 2;
+
+    const tick = () => {
+      if (!isPaused.current) {
+        el.scrollLeft += SPEED;
+        if (el.scrollLeft >= half) el.scrollLeft -= half;
+      }
+      animRef.current = requestAnimationFrame(tick);
+    };
+    animRef.current = requestAnimationFrame(tick);
+
+    const pause = () => { isPaused.current = true; };
+    const resume = () => { isPaused.current = false; };
+
+    el.addEventListener('touchstart', pause, { passive: true });
+    el.addEventListener('touchend', resume, { passive: true });
+    el.addEventListener('mouseenter', pause);
+    el.addEventListener('mouseleave', resume);
+
+    return () => {
+      cancelAnimationFrame(animRef.current);
+      el.removeEventListener('touchstart', pause);
+      el.removeEventListener('touchend', resume);
+      el.removeEventListener('mouseenter', pause);
+      el.removeEventListener('mouseleave', resume);
+    };
+  }, []);
+
+  return (
+    <div className="relative">
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
+      <div
+        ref={scrollRef}
+        className="flex overflow-x-scroll hide-scrollbar py-3"
+        style={{ WebkitOverflowScrolling: 'touch', cursor: 'grab' }}
+      >
+        {[...videos, ...videos].map((v, i) => (
+          <div key={i} style={{ flexShrink: 0, width: '52vw', maxWidth: '200px', marginRight: '12px' }}>
+            <VideoCard v={v} />
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -581,7 +638,7 @@ export default function Home() {
         </div>
 
         {/* Mobile: marquee carousel (same as desktop) */}
-        <div className="md:hidden relative mb-8">
+        <div className="md:hidden relative mb-8 mt-6">
           {/* Fade edges */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
@@ -639,19 +696,9 @@ export default function Home() {
 
           {/* Video carousel */}
 
-          {/* Mobile: marquee */}
-          <div className="md:hidden relative">
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
-            <div className="overflow-hidden">
-              <div className="marquee-track py-3" style={{ gap: '12px' }}>
-                {[...videos, ...videos].map((v, i) => (
-                  <div key={i} style={{ flexShrink: 0, width: '52vw', maxWidth: '200px', marginRight: '12px' }}>
-                    <VideoCard v={v} />
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Mobile: touch-draggable auto-scroll marquee */}
+          <div className="md:hidden">
+            <MobileVideoMarquee videos={videos} />
           </div>
 
           {/* Desktop: paged carousel with arrows */}
