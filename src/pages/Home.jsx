@@ -200,13 +200,14 @@ export default function Home() {
                 width: '100%',
                 height: '390px',
                 objectFit: 'cover',
-                objectPosition: '92% top',
-                maskImage: 'linear-gradient(to top, transparent 4%, black 30%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to right, transparent 0%, black 12%)',
-                WebkitMaskImage: 'linear-gradient(to top, transparent 4%, black 30%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to right, transparent 0%, black 12%)',
-                maskComposite: 'intersect',
-                WebkitMaskComposite: 'source-in',
+                objectPosition: '85% top',
+                display: 'block',
               }}
             />
+            {/* Fade overlays — no mask-composite, no blink */}
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, white 6%, transparent 35%)' }} />
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, white 5%, transparent 20%)' }} />
+            <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to left, white 5%, transparent 20%)' }} />
           </div>
         </div>
 
