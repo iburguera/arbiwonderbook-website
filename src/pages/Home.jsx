@@ -192,18 +192,17 @@ export default function Home() {
               How it works &#128242;
             </a>
           </div>
-          <div className="relative w-screen -mx-5 -mb-8">
+          <div className="relative w-screen -mx-5">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
-              className="w-full"
               style={{
-                height: 'auto',
-                minHeight: '500px',
+                width: '100%',
+                height: '420px',
                 objectFit: 'cover',
-                objectPosition: 'center bottom',
-                maskImage: 'linear-gradient(to top, transparent 0%, black 18%), linear-gradient(to left, transparent 0%, black 6%)',
-                WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 18%), linear-gradient(to left, transparent 0%, black 6%)',
+                objectPosition: 'center top',
+                maskImage: 'linear-gradient(to top, transparent 4%, black 30%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to right, transparent 0%, black 12%)',
+                WebkitMaskImage: 'linear-gradient(to top, transparent 4%, black 30%), linear-gradient(to left, transparent 0%, black 12%), linear-gradient(to right, transparent 0%, black 12%)',
                 maskComposite: 'intersect',
                 WebkitMaskComposite: 'source-in',
               }}
