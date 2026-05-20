@@ -179,10 +179,10 @@ export default function Home() {
                 backgroundClip: 'text',
               }}
             >Magic books</span>{' '}
-            <span className="text-gray-900">that come<br />to life in AR</span>
+            <span className="text-gray-900">in Augmented Reality</span>
           </h1>
           <p className="text-sm text-gray-500 mb-5 max-w-xs">
-            Scan the pages with the free app and watch the characters leap out in <strong style={{ color: '#32CD32' }}>Augmented Reality</strong>.
+            Scan pages with the free app and see characters in <strong style={{ color: '#32CD32' }}>Augmented Reality</strong>.
           </p>
           <div className="flex gap-3 mb-3">
             <a href="#books" className="text-white font-bold py-3 px-5 rounded-xl shadow-lg text-sm" style={{ backgroundColor: '#1E90FF' }}>
