@@ -170,8 +170,16 @@ export default function Home() {
 
         {/* ── Mobile hero ── */}
         <div className="md:hidden flex flex-col items-center text-center px-5 pt-10 pb-0" style={{ minHeight: '92vw' }}>
-          <h1 className="text-[2rem] font-extrabold leading-snug text-gray-900 mb-3">
-            Magic books that<br /><span style={{ color: '#1E90FF' }}>come to life</span> with AR
+          <h1 className="text-[2rem] font-extrabold leading-snug mb-3">
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #1E90FF 0%, #32CD32 50%, #FF8C00 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >Magic books</span>{' '}
+            <span className="text-gray-900">that come<br />to life in AR</span>
           </h1>
           <p className="text-sm text-gray-500 mb-5 max-w-xs">
             Scan the pages with the free app and watch the characters leap out in <strong style={{ color: '#32CD32' }}>Augmented Reality</strong>.
@@ -225,7 +233,7 @@ export default function Home() {
           </div>
 
           {/* 3 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:-mt-12">
 
             {/* ── STEP 1 ── */}
             <div
