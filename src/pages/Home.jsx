@@ -192,14 +192,14 @@ export default function Home() {
               How it works &#128242;
             </a>
           </div>
-          <div className="relative w-full max-w-sm mx-auto">
+          <div className="relative w-full mx-auto -mb-2">
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
               className="w-full"
               style={{
-                maskImage: 'linear-gradient(to top, transparent 2%, black 22%), linear-gradient(to left, transparent 0%, black 18%)',
-                WebkitMaskImage: 'linear-gradient(to top, transparent 2%, black 22%), linear-gradient(to left, transparent 0%, black 18%)',
+                maskImage: 'linear-gradient(to top, transparent 2%, black 22%), linear-gradient(to left, transparent 0%, black 14%)',
+                WebkitMaskImage: 'linear-gradient(to top, transparent 2%, black 22%), linear-gradient(to left, transparent 0%, black 14%)',
                 maskComposite: 'intersect',
                 WebkitMaskComposite: 'source-in',
               }}
@@ -212,7 +212,10 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HOW IT WORKS
       ═══════════════════════════════════════════ */}
-      <section id="how-it-works" style={{ backgroundColor: '#F7F6F2' }} className="py-10 md:py-24 overflow-hidden">
+      <section id="how-it-works" style={{ backgroundColor: '#F7F6F2' }} className="py-10 md:py-24 overflow-hidden relative">
+        {/* Fade top/bottom to blend with white sections */}
+        <div className="absolute top-0 left-0 w-full h-10 pointer-events-none" style={{ background: 'linear-gradient(to bottom, #ffffff, transparent)' }} />
+        <div className="absolute bottom-0 left-0 w-full h-10 pointer-events-none" style={{ background: 'linear-gradient(to top, #ffffff, transparent)' }} />
         <div className="max-w-6xl mx-auto px-6">
 
           {/* Header */}
@@ -482,7 +485,10 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           TESTIMONIALS
       ═══════════════════════════════════════════ */}
-      <section id="reviews" style={{ backgroundColor: '#FAFAF5' }} className="py-10 md:py-20 overflow-hidden">
+      <section id="reviews" style={{ backgroundColor: '#FAFAF5' }} className="py-10 md:py-20 overflow-hidden relative">
+        {/* Fade top/bottom to blend with white sections */}
+        <div className="absolute top-0 left-0 w-full h-10 pointer-events-none" style={{ background: 'linear-gradient(to bottom, #ffffff, transparent)' }} />
+        <div className="absolute bottom-0 left-0 w-full h-10 pointer-events-none" style={{ background: 'linear-gradient(to top, #ffffff, transparent)' }} />
 
         {/* Header */}
         <div className="max-w-6xl mx-auto px-6">
