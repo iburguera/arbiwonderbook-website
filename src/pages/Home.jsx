@@ -249,19 +249,21 @@ export default function Home() {
               How it works &#128242;
             </a>
           </div>
-          <div className="relative w-screen -mx-5">
+          <div className="relative w-screen -mx-5" style={{ height: '390px', overflow: 'hidden' }}>
             <img
               src="/images/hero-visual.png"
               alt="ARBI augmented reality experience"
               style={{
+                position: 'absolute',
+                inset: 0,
                 width: '100%',
-                height: '390px',
+                height: '100%',
                 objectFit: 'cover',
                 objectPosition: '85% top',
                 display: 'block',
               }}
             />
-            {/* Fade overlays — no mask-composite, no blink */}
+            {/* Fade overlays */}
             <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, white 6%, transparent 35%)' }} />
             <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, white 5%, transparent 20%)' }} />
             <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to left, white 5%, transparent 20%)' }} />
