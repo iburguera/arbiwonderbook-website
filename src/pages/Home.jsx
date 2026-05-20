@@ -169,14 +169,14 @@ export default function Home() {
         </div>
 
         {/* ── Mobile hero ── */}
-        <div className="md:hidden flex flex-col items-center text-center px-5 pt-8 pb-0">
-          <h1 className="text-[1.75rem] font-extrabold leading-tight text-gray-900 mb-2">
-            <span style={{ color: '#1E90FF' }}>Augmented Reality</span>{' '}books<br />your kids will love
+        <div className="md:hidden flex flex-col items-center text-center px-5 pt-10 pb-0" style={{ minHeight: '92vw' }}>
+          <h1 className="text-[2rem] font-extrabold leading-snug text-gray-900 mb-3">
+            Magic books that<br /><span style={{ color: '#1E90FF' }}>come to life</span> with AR
           </h1>
-          <p className="text-sm font-extrabold mb-4" style={{ color: '#FF8C00' }}>
-            &#11088; Scan the page — watch it come to life!
+          <p className="text-sm text-gray-500 mb-5 max-w-xs">
+            Scan the pages with the free app and watch the characters leap out in <strong style={{ color: '#32CD32' }}>Augmented Reality</strong>.
           </p>
-          <div className="flex gap-3 mb-1">
+          <div className="flex gap-3 mb-3">
             <a href="#books" className="text-white font-bold py-3 px-5 rounded-xl shadow-lg text-sm" style={{ backgroundColor: '#1E90FF' }}>
               Buy on Amazon
             </a>
@@ -184,15 +184,19 @@ export default function Home() {
               How it works &#128242;
             </a>
           </div>
-          <img
-            src="/images/hero-visual.png"
-            alt="ARBI augmented reality experience"
-            className="w-full max-w-xs mx-auto"
-            style={{
-              maskImage: 'linear-gradient(to top, transparent 2%, black 28%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 2%, black 28%)',
-            }}
-          />
+          <div className="relative w-full max-w-sm mx-auto">
+            <img
+              src="/images/hero-visual.png"
+              alt="ARBI augmented reality experience"
+              className="w-full"
+              style={{
+                maskImage: 'linear-gradient(to top, transparent 2%, black 22%), linear-gradient(to left, transparent 0%, black 18%)',
+                WebkitMaskImage: 'linear-gradient(to top, transparent 2%, black 22%), linear-gradient(to left, transparent 0%, black 18%)',
+                maskComposite: 'intersect',
+                WebkitMaskComposite: 'source-in',
+              }}
+            />
+          </div>
         </div>
 
       </section>
@@ -558,8 +562,8 @@ export default function Home() {
         </div>
 
         {/* Video reviews */}
-        <div className="max-w-6xl mx-auto px-6 -mt-10">
-          <div className="flex items-center gap-3 mb-3">
+        <div className="max-w-6xl mx-auto px-6 mt-4 md:-mt-10">
+          <div className="flex items-center gap-3 mb-3 mt-6">
             <div className="h-px flex-1 bg-gray-200" />
             <p className="text-sm font-extrabold text-gray-400 uppercase tracking-widest whitespace-nowrap">📹 Real customers. Real reactions.</p>
             <div className="h-px flex-1 bg-gray-200" />
