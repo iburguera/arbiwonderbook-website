@@ -516,7 +516,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Marquee carousel */}
+        {/* Marquee carousel (desktop only) */}
         <style>{`
           @keyframes marquee {
             0%   { transform: translateX(0); }
@@ -532,7 +532,56 @@ export default function Home() {
           }
         `}</style>
 
-        <div className="relative mb-6 md:mb-14">
+        {/* Desktop: marquee carousel */}
+        <div className="hidden md:block relative mb-6 md:mb-14">
+          {/* Fade edges */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
+
+          <div className="overflow-hidden -mt-10">
+            <div className="marquee-track py-3">
+              {[...testimonials, ...testimonials].map((t, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col mx-3 flex-shrink-0"
+                  style={{ width: '260px' }}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: t.stars }).map((_, i) => (
+                        <span key={i} className="text-sm" style={{ color: '#FFD700' }}>★</span>
+                      ))}
+                    </div>
+                    <span
+                      className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                      style={{
+                        background: t.book === 'ARBI 2' ? '#32CD3220' : '#1E90FF20',
+                        color: t.book === 'ARBI 2' ? '#32CD32' : '#1E90FF',
+                      }}
+                    >
+                      {t.book}
+                    </span>
+                  </div>
+                  {t.title && (
+                    <p className="font-bold text-gray-800 text-xs mb-1 leading-snug">{t.title}</p>
+                  )}
+                  <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-3 italic">
+                    "{t.text}"
+                  </p>
+                  <div className="border-t border-gray-100 pt-3">
+                    <p className="font-extrabold text-gray-900 text-xs">
+                      {t.flag && <span className="mr-1">{t.flag}</span>}{t.name}
+                    </p>
+                    <p className="text-xs text-gray-400">{t.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: marquee carousel (same as desktop) */}
+        <div className="md:hidden relative mb-8">
           {/* Fade edges */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
@@ -590,33 +639,18 @@ export default function Home() {
 
           {/* Video carousel */}
 
-          {/* Mobile: native horizontal swipe with snap + peek */}
-          <div className="md:hidden -mx-6 px-6">
-            <div
-              className="flex gap-3 overflow-x-auto py-3 hide-scrollbar"
-              style={{
-                scrollSnapType: 'x mandatory',
-                WebkitOverflowScrolling: 'touch',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                paddingRight: '2rem',
-              }}
-            >
-              {videos.map((v, i) => (
-                <div
-                  key={i}
-                  style={{
-                    scrollSnapAlign: 'start',
-                    flexShrink: 0,
-                    width: '52vw',
-                    maxWidth: '200px',
-                  }}
-                >
-                  <VideoCard v={v} />
-                </div>
-              ))}
-              {/* trailing spacer so last card doesn't hug the edge */}
-              <div style={{ flexShrink: 0, width: '1rem' }} />
+          {/* Mobile: marquee */}
+          <div className="md:hidden relative">
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-10" style={{ background: 'linear-gradient(to right, #FAFAF5, transparent)' }} />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-10" style={{ background: 'linear-gradient(to left, #FAFAF5, transparent)' }} />
+            <div className="overflow-hidden">
+              <div className="marquee-track py-3" style={{ gap: '12px' }}>
+                {[...videos, ...videos].map((v, i) => (
+                  <div key={i} style={{ flexShrink: 0, width: '52vw', maxWidth: '200px', marginRight: '12px' }}>
+                    <VideoCard v={v} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
