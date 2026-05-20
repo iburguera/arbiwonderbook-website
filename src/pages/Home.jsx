@@ -206,8 +206,9 @@ export default function Home() {
                 <a href="#books" className="text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform hover:scale-105" style={{ backgroundColor: '#1E90FF' }}>
                   Buy it on Amazon
                 </a>
-                <a href="#how-it-works" className="bg-white text-gray-800 font-bold py-3 px-6 rounded-lg border border-gray-300 shadow-lg transition-transform hover:scale-105">
-                  How it works &#128242;
+                <a href="#how-it-works" className="bg-white text-gray-800 font-bold py-3 px-6 rounded-lg border border-gray-300 shadow-lg transition-transform hover:scale-105 flex items-center gap-2">
+                  How it works
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                 </a>
               </div>
             </div>
@@ -245,8 +246,9 @@ export default function Home() {
             <a href="#books" className="text-white font-bold py-3 px-5 rounded-xl shadow-lg text-sm" style={{ backgroundColor: '#1E90FF' }}>
               Buy on Amazon
             </a>
-            <a href="#how-it-works" className="bg-white text-gray-800 font-bold py-3 px-5 rounded-xl border border-gray-300 shadow-sm text-sm">
-              How it works &#128242;
+            <a href="#how-it-works" className="bg-white text-gray-800 font-bold py-3 px-5 rounded-xl border border-gray-300 shadow-sm text-sm flex items-center gap-2">
+              How it works
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
             </a>
           </div>
           <div className="relative w-screen -mx-5" style={{ height: '390px', overflow: 'hidden' }}>
